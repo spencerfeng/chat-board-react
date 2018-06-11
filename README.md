@@ -4,7 +4,7 @@ react.chatboard.com.au
 
 ## About
 
-A real-time chat application built with `React`, `Redux`, `Node.js` and `Socket.IO`.
+A real-time chat application built with `React`, `Redux`, `Node.js`, `MongoDB` and `Socket.IO`.
 
 ## Running locally for development
 
