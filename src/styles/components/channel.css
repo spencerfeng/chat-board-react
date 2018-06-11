@@ -1,0 +1,7 @@
+.active-channel-item {
+  background-color: config('colors.green-light');
+
+  &:hover {
+      background-color: config('colors.green');
+  }
+}

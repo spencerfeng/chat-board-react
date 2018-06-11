@@ -1,0 +1,28 @@
+.backdrop {
+  background-color: rgba(255,255,255,0.95);
+}
+
+.modal {
+  width: 70%;
+  left: 15%;
+  top: 30%;
+  transition: all 0.3s ease-out;
+  padding: 20px;
+}
+
+.modal-close-btn {
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  top: -20px;
+  right: -20px;
+  line-height: 35px;
+}
+
+@media only screen and (min-width: 600px) {
+  .modal {
+      width: 500px;
+      left: calc(50% - 250px);
+  }
+}

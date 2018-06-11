@@ -1,0 +1,44 @@
+{
+  "name": "chat-board-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "font-awesome": "^4.7.0",
+    "formsy-react": "^1.1.4",
+    "jsonwebtoken": "^8.2.1",
+    "moment": "^2.22.2",
+    "mongoose": "^5.1.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.2.0",
+    "socket.io": "^2.1.1"
+  },
+  "scripts": {
+    "start": "npm run watch:css & react-scripts start",
+    "build": "npm run build:css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build:css": "postcss src/styles/index.css -o src/index.css",
+    "watch:css": "postcss src/styles/index.css -o src/index.css -w",
+    "serve": "nodemon server.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.3.0",
+    "nodemon": "^1.17.5",
+    "postcss-cli": "^5.0.0",
+    "redux-devtools": "^3.4.1",
+    "tailwindcss": "^0.5.2"
+  },
+  "proxy": "http://localhost:3001"
+}

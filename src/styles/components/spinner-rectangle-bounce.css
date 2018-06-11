@@ -1,0 +1,79 @@
+.spinner-rectangle-bounce {
+  text-align: center;
+}
+
+.spinner-rectangle-bounce > div {
+  height: 100%;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner-rectangle-bounce .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner-rectangle-bounce .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner-rectangle-bounce .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner-rectangle-bounce .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+/* White Spinner */
+.spinner-rectangle-bounce.spinner-white > div {
+  background-color: #fff;
+}
+
+/* Grey Spinner */
+.spinner-rectangle-bounce.spinner-grey > div {
+  background-color: #b8c2cc;
+}
+
+/* Small Spinner */
+.spinner-small {
+  width: 50px;
+  height: 40px;
+}
+
+.spinner-rectangle-bounce.spinner-small > div {
+  width: 4px;
+  margin: 0 1px;
+}
+
+/* Normal Spinner */
+.spinner-normal {
+  width: 50px;
+  height: 50px;
+}
+
+.spinner-rectangle-bounce.spinner-normal > div {
+  width: 6px;
+  margin: 0 2px;
+}
+

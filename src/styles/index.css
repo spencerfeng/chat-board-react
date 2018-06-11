@@ -1,0 +1,86 @@
+/** Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+/** Font Awesome */
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ *
+ * If using `postcss-import`, you should import this line from it's own file:
+ *
+ * @import "./tailwind-preflight.css";
+ *
+ * See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622
+ */
+@tailwind preflight;
+
+/**
+ * Here you would add any of your custom component classes; stuff that you'd
+ * want loaded *before* the utilities so that the utilities could still
+ * override them.
+ *
+ * Example:
+ *
+ * .btn { ... }
+ * .form-input { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "components/buttons";
+ * @import "components/forms";
+ */
+
+.btn {
+  @apply .rounded .px-4 .py-2 .text-white;
+}
+.btn-green {
+  @apply .bg-green;
+}
+
+.form-validation-err {
+  @apply .text-xs .text-red .mt-1;
+}
+
+@import "./styles/components/shared.css";
+@import "./styles/components/modal.css";
+@import "./styles/components/channel.css";
+@import "./styles/components/spinner-rectangle-bounce.css";
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ *
+ * If using `postcss-import`, you should import this line from it's own file:
+ *
+ * @import "./tailwind-utilities.css";
+ *
+ * See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622
+ */
+@tailwind utilities;
+
+/**
+ * Here you would add any custom utilities you need that don't come out of the
+ * box with Tailwind.
+ *
+ * Example :
+ *
+ * .bg-pattern-graph-paper { ... }
+ * .skew-45 { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "utilities/background-patterns";
+ * @import "utilities/skew-transforms";
+ */
+
+@responsive {
+    .border-box {
+        box-sizing: border-box;
+    }
+}
+
