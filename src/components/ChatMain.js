@@ -146,7 +146,7 @@ class ChatMain extends Component {
         else {
           chatSection = (
             <div className="flex flex-grow items-center justify-center">
-              <button onClick={() => this.props.onStartJoinChannel(channelId, this.props.history)} className="appearance-none rounded text-xl px-6 py-3 uppercase border rounded border-black text-black text-xs hover:bg-black hover:text-white">Join</button>
+              <button onClick={() => this.props.onStartJoinChannel(channelId, this.props.history, this.props.socket)} className="appearance-none rounded text-xl px-6 py-3 uppercase border rounded border-black text-black text-xs hover:bg-black hover:text-white">Join</button>
             </div>
           );
         }
@@ -189,7 +189,7 @@ const mapDispatchToProps = dispatch => {
     onSetSelectedChannel: (channelId) => dispatch(actions.setSelectedChannel(channelId)),
     onStartGetChannelMessages: (channelId, history) => dispatch(actions.startGetChannelMessages(channelId, history)),
     onStartAddMessage: (messageBody, channelId, history, socket) => dispatch(actions.startAddMessage(messageBody, channelId, history, socket)),
-    onStartJoinChannel: (channelId, history) => dispatch(actions.startJoinChannel(channelId, history))
+    onStartJoinChannel: (channelId, history, socket) => dispatch(actions.startJoinChannel(channelId, history, socket))
   }
 
 }
